@@ -5,7 +5,14 @@ import { Avatar } from "./Avatar";
 
 
 
-export function Comment() {
+export function Comment({ content, onDeleteComment }) {
+
+  function handleDeleteComment() {
+    console.log('deletar');
+
+    onDeleteComment(content);
+  }
+
   return (
     <div className={styles.comment}>
       <Avatar 
@@ -27,12 +34,12 @@ export function Comment() {
               </time>
             </div>
 
-            <button title="Deletar comentário">
+            <button onClick={handleDeleteComment} title="Deletar comentário">
               <BsFillTrashFill size={24} />
             </button>
           </header>
 
-          <p>Muito bom Devon, parabéns!! 👏👏</p>
+          <p>{content}</p>
         </div>
 
         <footer>

@@ -1,33 +1,29 @@
-import styles from "./Comment.module.css";
-import { BsFillTrashFill } from 'react-icons/bs';
-import { TiThumbsUp } from 'react-icons/ti';
-import { Avatar } from "./Avatar";
-import { useState } from "react";
+import styles from './Comment.module.css'
+import { BsFillTrashFill } from 'react-icons/bs'
+import { TiThumbsUp } from 'react-icons/ti'
+import { Avatar } from '../Avatar'
+import { useState } from 'react'
 
-
-
+// onDeleteComment = deleteComment do component post
 export function Comment({ content, onDeleteComment }) {
-
-  const [likeCount, setLikeCount] = useState(0);
+  const [likeCount, setLikeCount] = useState(0)
 
   function handleDeleteComment() {
-    console.log('deletar');
-
-    onDeleteComment(content);
+    onDeleteComment(content)
   }
 
   function handleLikeComment() {
     setLikeCount((state) => {
       return state + 1
-    });
+    })
   }
 
   return (
     <div className={styles.comment}>
-      <Avatar 
+      <Avatar
         hasBorder={false}
-        src="https://github.com/maykbrito.png" 
-        alt="Foto do Perfil" 
+        src="https://github.com/maykbrito.png"
+        alt="Foto do Perfil"
       />
 
       <div className={styles.commentBox}>
@@ -59,5 +55,5 @@ export function Comment({ content, onDeleteComment }) {
         </footer>
       </div>
     </div>
-  );
+  )
 }

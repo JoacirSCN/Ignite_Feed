@@ -9,7 +9,7 @@ Este projeto foi desenvolvido durante o módulo 6 do bootcamp Ignite da Rocketse
 * React + JS
 
 ### 🔗 Online Project
-* [Ignite Feed](https://06-ignite-call-delta.vercel.app/)
+* [Ignite Feed](https://ignite-feed-six-swart.vercel.app/)
 
 &nbsp;
 
